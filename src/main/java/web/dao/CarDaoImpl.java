@@ -18,7 +18,7 @@ public class CarDaoImpl implements CarDao {
 
     @Override
     public List<Car> getCars(Integer count) {
-        if (count == null || count >= cars.size()) {
+        if (count == null || count >= cars.size() || count < 0) {
             return cars;
         }
         return cars.subList(0, count);
